@@ -1,0 +1,114 @@
+/* Styling umum untuk body dan html */
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow: hidden;
+  font-family: 'Roboto', sans-serif;
+}
+
+/* Styling untuk partikel background */
+#particles-js {
+  width: 100%;
+  height: 100vh;
+  background-color: hsl(0, 0%, 0%);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+/* Styling untuk search bar */
+.search-container {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.search-bar {
+  width: 300px;
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 20px;
+  border: 2px solid #ccc;
+  outline: none;
+  box-sizing: border-box;
+}
+
+.search-bar:focus {
+  border-color: #007bff;
+}
+
+button {
+  padding: 10px 20px;
+  margin-left: 10px;
+  border-radius: 5px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+/* Styling untuk container cuaca */
+.container {
+  width: 80%;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
+/* Styling untuk kartu cuaca */
+.weather-card {
+  background: #fff;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  margin: 20px 0;
+}
+
+.weather-icon {
+  width: 100px;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+.weather-card h2 {
+  margin: 0;
+  font-size: 2em;
+}
+
+.weather-card p {
+  font-size: 1.2em;
+  margin: 10px 0;
+}
+
+.temp {
+  font-size: 3em;
+  color: #FF5733;
+}
+
+.location {
+  font-size: 1.2em;
+  color: #555;
+}
+
+/* Responsif untuk perangkat kecil */
+@media screen and (max-width: 600px) {
+  .search-bar {
+    width: 80%;
+  }
+  .weather-card {
+    padding: 20px;
+  }
+  .weather-icon {
+    width: 80px;
+  }
+  .temp {
+    font-size: 2.5em;
+  }
+  .location {
+    font-size: 1em;
+  }
+}
