@@ -24,6 +24,14 @@ body, html {
   margin-top: 20px;
 }
 
+.Cara {
+  text-align: center;
+  color: white;
+  z-index: 10;
+  font-size: 1.2em;
+  margin-top: 20px;
+}
+
 .search-bar {
   padding: 10px;
   font-size: 16px;
