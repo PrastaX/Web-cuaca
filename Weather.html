@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SkyWave - Weather</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
+</head>
+<body>
+  <div id="particles-js"></div>
+
+  <!-- Search Form -->
+  <div class="search-container">
+    <form onsubmit="getWeather(event)">
+      <input type="search" class="search-bar" placeholder="Search city..." id="cityInput" required>
+      <button type="submit">Search</button>
+    </form>
+  </div>
+
+  <!-- Weather Info -->
+  <div class="container">
+    <div class="weather-card">
+      <img id="weather-icons" class="weather-icon" src="" alt="Weather Icon">
+      <h2 id="weather-title">Cuaca Hari Ini</h2>
+      <p id="location" class="location">Location</p>
+      <p id="temp" class="temp">0°C</p>
+      <p id="description">Weather description</p>
+      <h1 class="Pras">Made By Prasta</h1>
+    </div>
+  </div>
+
+  <div class="Cara">
+    <h1>Cara Pakai:</h1>
+    <h1>1. Masukan Nama Negara/Kota</h1>
+    <h1>2. Lalu Pencet Tombol Search</h1>
+    <h1>Selamat Mencoba</h1>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
