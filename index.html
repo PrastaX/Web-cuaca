@@ -5,18 +5,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>SkyWave - Weather</title>
   <link rel="stylesheet" href="style.css">
-  <script src="https://cdn.jsdelivr.net/npm/particles.js">
-    <link rel="preload">
-  </script>
+  <script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
 </head>
 <body>
- <div id="particles-js"></div>
- <!--<img id="background" class="BackGroundS">-->
+  <div id="particles-js"></div>
 
-  <!-- Search bar -->
+  <!-- Search Form -->
   <div class="search-container">
-    <input type="text" class="search-bar" placeholder="Search city..." id="cityInput">
-    <button onclick="getWeather()">Search</button>
+    <form onsubmit="getWeather(event)">
+      <input type="search" class="search-bar" placeholder="Search city..." id="cityInput" required>
+      <button type="submit">Search</button>
+    </form>
   </div>
 
   <!-- Weather Info -->
@@ -27,19 +26,17 @@
       <p id="location" class="location">Location</p>
       <p id="temp" class="temp">0°C</p>
       <p id="description">Weather description</p>
-        <h1 class="Pras">Made By Prasta</h1>
+      <h1 class="Pras">Made By Prasta</h1>
     </div>
   </div>
-  
+
   <div class="Cara">
-<h1>Cara Pakai:</h1>
-<h1>1. Masukan Nama Negara/Kota</h1>
-<h1>2. Lalu Pencet Tombol Search</h1>
-<h1>Selamat Mencoba</h1>
+    <h1>Cara Pakai:</h1>
+    <h1>1. Masukan Nama Negara/Kota</h1>
+    <h1>2. Lalu Pencet Tombol Search</h1>
+    <h1>Selamat Mencoba</h1>
   </div>
 
-
   <script src="script.js"></script>
-  <script src="Main.js"></script>
 </body>
 </html>
