@@ -114,3 +114,9 @@ function getWeather() {
       container.style.display = 'none'; // Sembunyikan kontainer jika error
     });
 }
+
+document.getElementById('cityInput').addEventListener('keypress', function (event) {
+      if (event.key === 'Enter') {
+        getWeather();
+      }
+    });
