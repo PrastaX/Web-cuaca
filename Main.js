@@ -47,7 +47,7 @@ function getWeather() {
     console.log('City input is empty, showing instructions...');
     alert('Masukkan nama kota terlebih dahulu!');
     container.style.display = 'none'; // Pastikan kontainer tetap tersembunyi
-    cara.style.display = 'block'; // Tampilkan elemen .Cara
+    Cara.style.display = 'block'; // Tampilkan elemen .Cara
     return;
   }
 
