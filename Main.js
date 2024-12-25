@@ -1,8 +1,8 @@
-// API Key dan endpoint
-const apiKey = '91f6f373fd60b291cadd60f97d6475c4'; // Ganti dengan API Key Anda dari OpenWeatherMap
+// API Key dan Endpoint
+const apiKey = '91f6f373fd60b291cadd60f97d6475c4'; // Ganti dengan API Key Anda
 console.log(`API Key: ${apiKey}`);
 
-// Daftar deskripsi cuaca dari OpenWeatherMap
+// Daftar deskripsi cuaca
 const weatherDescriptions = {
   "clear sky": "Clear Sky",
   "few clouds": "Few Clouds",
@@ -81,64 +81,21 @@ function getWeather(event) {
       const weather = data.weather[0];
       const temperature = data.main.temp;
       const location = data.name;
+      const country = data.sys.country; // Tambahkan data negara
       const description = weatherDescriptions[weather.description.toLowerCase()] || "Unknown";
 
-      console.log(`Location: ${location}`);
+      console.log(`Location: ${location}, Country: ${country}`);
       console.log(`Temperature: ${temperature}°C`);
       console.log(`Description: ${description}`);
       
-      document.getElementById('location').innerText = `${location}`;
+      document.getElementById('location').innerText = `${location}, ${country}`;
       document.getElementById('temp').innerText = `${temperature}°C`;
       document.getElementById('description').innerText = description;
       document.getElementById('weather-title').innerText = `Weather Today`;
 
       // Ganti gambar berdasarkan deskripsi cuaca
       const weatherIcon = document.getElementById('weather-icons');
-      switch (description) {
-        case "Clear Sky":
-          console.log('Setting icon for Clear Sky');
-          weatherIcon.src = `https://openweathermap.org/img/wn/${weather.icon}@2x.png`;
-          break;
-        case "Few Clouds":
-          console.log('Setting icon for Few Clouds');
-          weatherIcon.src = `https://openweathermap.org/img/wn/${weather.icon}@2x.png`;
-          break;
-        case "Scattered Clouds":
-          console.log('Setting icon for Scattered Clouds');
-          weatherIcon.src = `https://openweathermap.org/img/wn/${weather.icon}@2x.png`;
-          break;
-        case "Broken Clouds":
-          console.log('Setting icon for Broken Clouds');
-          weatherIcon.src = `https://openweathermap.org/img/wn/${weather.icon}@2x.png`;
-          break;
-        case "Overcast Clouds":
-          console.log('Setting icon for Overcast Clouds');
-          weatherIcon.src = `https://openweathermap.org/img/wn/${weather.icon}@2x.png`;
-          break;
-        case "Shower Rain":
-        case "Light Rain":
-        case "Moderate Rain":
-          console.log('Setting icon for Rain');
-          weatherIcon.src = `https://openweathermap.org/img/wn/${weather.icon}@2x.png`;
-          break;
-        case "Heavy Rain":
-        case "Very Heavy Rain":
-          console.log('Setting icon for Heavy Rain');
-          weatherIcon.src = `https://openweathermap.org/img/wn/${weather.icon}@2x.png`;
-          break;
-        case "Snow":
-          console.log('Setting icon for Snow');
-          weatherIcon.src = `https://openweathermap.org/img/wn/${weather.icon}@2x.png`;
-          break;
-        case "Mist":
-          console.log('Setting icon for Mist');
-          weatherIcon.src = `https://openweathermap.org/img/wn/${weather.icon}@2x.png`;
-          break;
-        default:
-          console.log('Setting default icon');
-          weatherIcon.src = 'images__13_-removebg-preview.png';
-          break;
-      }
+      weatherIcon.src = `https://openweathermap.org/img/wn/${weather.icon}@2x.png`;
     })
     .catch(error => {
       console.error('Error:', error);
